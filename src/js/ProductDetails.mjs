@@ -30,12 +30,22 @@ export default class ProductDetails {
     const product = this.product;
 
     document.querySelector(".product-detail").innerHTML = `
-      <img src="${product.Image}" alt="${product.Name}">
+      <img
+        src="${product.Images.PrimaryLarge}"
+        alt="${product.NameWithoutBrand}"
+      >
+
       <h3>${product.Brand.Name}</h3>
+
       <h2>${product.Name}</h2>
+
       <p>$${product.FinalPrice}</p>
+
       <p>${product.DescriptionHtmlSimple}</p>
-      <button id="addToCart">Add to Cart</button>
+
+      <button id="addToCart">
+        Add to Cart
+      </button>
     `;
   }
 }
