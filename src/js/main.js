@@ -1,12 +1,13 @@
-import ProductData from "./ProductData.mjs";
-import ProductList from "./ProductList.mjs";
 
-const dataSource = new ProductData("tents");
+import ExternalServices from './ExternalServices.mjs';
+import ProductList from './ProductList.mjs';
 
-const element = document.querySelector(".product-list");
+const dataSource = new ExternalServices('tents');
+
+const element = document.querySelector('.product-list');
 
 const listing = new ProductList(
-  "tents",
+  'tents',
   dataSource,
   element
 );
